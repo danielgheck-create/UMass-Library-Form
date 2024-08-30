@@ -1,0 +1,107 @@
+body {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'myArea1 myArea1'
+    'myArea3 myArea3'
+    'myArea4 myArea4'
+    'myArea5 myArea6';
+  grid-gap: 0.25em;
+  background-color: #015a8b;
+  padding: 2rem;
+  width: 50vw;
+  border-radius: 40px;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'myArea1 myArea1 myArea2 myArea3 myArea3'
+      'myArea4 myArea5 myArea5 myArea5 myArea6';
+  }
+}
+
+/* @media (max-width: 767px) {
+  .grid-container {
+    grid-template-areas:
+      'myArea1 myArea1'
+      'myArea3 myArea3'
+      'myArea4 myArea4'
+      'myArea5 myArea6';
+    grid-gap: 0.25em;
+    background-color: #015a8b;
+    padding: 2rem;
+    width: 50vw;
+    border-radius: 40px;
+  }
+} */
+
+.item1 {
+  grid-area: myArea1;
+}
+.item2 {
+  grid-area: myArea2;
+}
+.item3 {
+  grid-area: myArea3;
+}
+.item4 {
+  grid-area: myArea4;
+}
+.item5 {
+  grid-area: myArea5;
+}
+.item6 {
+  grid-area: myArea6;
+}
+
+.grid-container > div {
+  background-color: #015a8b;
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-width {
+  width: 40px !important;
+}
+
+/* OTHER STYLES  */
+
+.light-background {
+  background-color: white !important;
+}
+
+.title {
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  text-align: left;
+}
+
+.adv-search {
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+}
+
+.search-text {
+  color: #000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+}
+
+.library-search-btn {
+  background-color: #fedf42 !important;
+  border-radius: 0px 20px 20px 0;
+}
